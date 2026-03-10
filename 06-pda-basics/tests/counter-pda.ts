@@ -1,11 +1,17 @@
 import * as anchor from "@coral-xyz/anchor";
 import { expect } from "chai";
 
+// Canli yazim notu:
+// 1) authority public key al
+// 2) ayni seed ile PDA derivation yap
+// 3) initialize + increment cagir
+// 4) fetch ile count'u kontrol et
+
 describe("counter-pda", () => {
   const provider = anchor.AnchorProvider.env();
   anchor.setProvider(provider);
 
-  const program = anchor.workspace.CounterPda as anchor.Program;
+  const program = anchor.workspace.CounterPda as any;
   const authority = provider.wallet.publicKey;
 
   // TS tarafinda PDA turetimi

@@ -1,5 +1,11 @@
 use anchor_lang::prelude::*;
 
+// Canli yazim notu:
+// 1) Counter state struct'ini yaz
+// 2) initialize ile state'i ilk degerlere cek
+// 3) increment ile sayaci arttir
+// 4) Accounts context'lerine init/mut/signer kurallarini ekle
+
 declare_id!("6R8Wk1AX2AkfRkF4zmfY4d7sGf4gCE8qP9czkP7gU5w9");
 
 #[program]
@@ -29,6 +35,7 @@ pub struct Initialize<'info> {
     // init: yeni account olustur
     // payer: olusturma ucretini authority odeyecek
     // space: discriminator(8) + Pubkey(32) + u64(8)
+    // Bu satiri derste once uzun yazip sonra kisaltma olarak gosterebilirsiniz.
     #[account(init, payer = authority, space = 8 + 32 + 8)]
     pub counter: Account<'info, Counter>,
 
@@ -51,6 +58,7 @@ pub struct Increment<'info> {
 #[account]
 pub struct Counter {
     // Bu alan counter'i kontrol eden adresi tutar.
+    // Her increment cagrisi bu authority tarafindan imzalanmali.
     pub authority: Pubkey,
     // Bu alan saya degerini tutar.
     pub count: u64,

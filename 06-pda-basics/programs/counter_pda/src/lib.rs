@@ -1,5 +1,11 @@
 use anchor_lang::prelude::*;
 
+// Canli yazim notu:
+// 1) 05'teki counter'i kopyala
+// 2) counter account'unu PDA'ye cevir (seeds + bump)
+// 3) bump degerini state'te sakla
+// 4) increment tarafinda ayni PDA'yi dogrula
+
 declare_id!("7YqTjL9h9WgRxf8YFfN3Y8JY3bT7nN96DUPkmN4J5H2b");
 
 #[program]
@@ -56,7 +62,10 @@ pub struct Increment<'info> {
 
 #[account]
 pub struct CounterPda {
+    // PDA'nin sahibi olan kullanici.
     pub authority: Pubkey,
+    // Sayac degeri.
     pub count: u64,
+    // PDA dogrulamasinda kullanilan bump.
     pub bump: u8,
 }

@@ -1,6 +1,11 @@
 # Komutlar ve 1 Satir Aciklama
 
 ```bash
+solana-keygen new --no-bip39-passphrase -o ~/.config/solana/id.json
+```
+Yeni bir wallet keypair dosyasi olusturur.
+
+```bash
 solana config get
 ```
 Aktif endpoint, keypair path ve config bilgisini gosterir.

@@ -13,6 +13,13 @@ type CounterPdaAccount = {
 };
 
 export default function App() {
+  // Canli yazim notu:
+  // 1) provider olustur
+  // 2) program instance olustur
+  // 3) PDA derivation yap
+  // 4) fetch + initialize + increment fonksiyonlarini yaz
+  // 5) butonlara bagla
+
   const { connection } = useConnection();
   const wallet = useWallet();
 
@@ -49,6 +56,7 @@ export default function App() {
     if (!program || !counterPda) return;
 
     // Chain'den account verisi oku.
+    // fetchNullable: account henuz yoksa null doner, hata atmaz.
     const account = (await (program.account as any).counterPda.fetchNullable(
       counterPda
     )) as CounterPdaAccount | null;
@@ -62,6 +70,7 @@ export default function App() {
     setStatus("initialize gonderiliyor...");
 
     // Bu buton transaction gonderiyor: initialize
+    // Ilk cagrida PDA account'u zincirde olusturulur.
     await program.methods
       .initialize()
       .accounts({
@@ -81,6 +90,7 @@ export default function App() {
     setStatus("increment gonderiliyor...");
 
     // Bu buton transaction gonderiyor: increment
+    // Her cagrida count degeri +1 olur.
     await program.methods
       .increment()
       .accounts({

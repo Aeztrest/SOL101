@@ -4,6 +4,12 @@ import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import { createProvider } from "./solana";
 
 export default function App() {
+  // Canli yazim notu:
+  // 1) useConnection ile endpoint al
+  // 2) useWallet ile wallet durumu al
+  // 3) createProvider ile AnchorProvider olustur
+  // 4) ekranda bu 3 bilgiyi goster
+
   // Connection hook: RPC baglantisi burada.
   const { connection } = useConnection();
   // Wallet hook: bagli kullanici bilgisi burada.

@@ -36,3 +36,27 @@ Her bolumu sirasiyla acip:
 - kucuk kod ornegini inceleyin
 
 Bu repo egitim odaklidir; production-grade mimari hedeflenmez.
+
+## Sifirdan Onboarding (0'dan baslayan ogrenci icin)
+
+1. `00-overview` ile buyuk resmi anlat.
+2. `01-cli-and-environment` ile kurulum + surum dogrulama yap.
+3. `02-wallet-and-devnet` ile wallet, devnet ve airdrop adimlarini tamamla.
+4. `03`-`07` arasi Anchor tarafini canli kod yazarak ilerlet.
+5. `08` ile deploy akisini goster.
+6. `09`-`10` ile frontend baglantisi ve instruction cagrisi anlat.
+
+## Egitmen Icin Uygulama Formati
+
+- Her derste once README'yi acip "bu bolumun amaci"ni oku.
+- Sonra README'deki komutlari ogrencilerle birlikte satir satir calistir.
+- Kod yazarken dosya icindeki kisa yorumlari takip ederek canli yaz.
+- Her bolum sonunda tek bir soru cevapla:
+  "Bu adim bir onceki adima gore neyi ekledi?"
+
+## Egitmenin Konu Anlatimi
+
+Bu repo, "sadece calisan kod" gostermek yerine, ogrencinin zihninde Solana mimarisini
+katman katman oturtmak icin tasarlandi. Egitmen olarak her bolumde su cizgiyi koruyun:
+once nedenini anlatin, sonra komutu/kodu yazin, en son ciktiyi yorumlayin. Ogrenci her
+adimdan sonra "bu neyi degistirdi?" sorusuna tek cumleyle cevap verebiliyorsa bolum hedefe ulasmistir.

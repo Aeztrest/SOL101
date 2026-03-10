@@ -31,3 +31,17 @@ solana program show <PROGRAM_ID>
 - Devnet'te deploy sonrasi dogrulama mantigini
 
 Detayli komut notlari icin: `deploy-checklist.md` ve `verify-commands.md`.
+
+## Canli anlatim akisi
+
+1. Once `anchor build` calistirilir (derleme).
+2. Sonra `anchor test` calistirilir (dogrulama).
+3. Sonra `anchor deploy` calistirilir (yayina alma).
+4. Cikan Program ID not edilir.
+5. `solana program show <PROGRAM_ID>` ile agdan dogrulanir.
+
+## Egitmenin Konu Anlatimi
+
+Deploy dersinde odak "komut ezberlemek" degil, riskli adimdan once guvenli kontrol yapmaktir.
+`build -> test -> deploy` sirasini bir kalite kapisi gibi anlatin.
+Program ID'nin degismesinin frontend ve testleri nasil etkiledigini bu bolumde netlestirin.

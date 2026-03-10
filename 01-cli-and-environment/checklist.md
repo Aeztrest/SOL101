@@ -1,5 +1,9 @@
 # Environment Checklist
 
+- [ ] Rust kuruldu (`source "$HOME/.cargo/env"` sonrasi)
+- [ ] Solana CLI PATH'e eklendi
+- [ ] Node.js LTS kuruldu (`nvm use --lts`)
+- [ ] Anchor CLI kuruldu
 - [ ] `rustc --version` calisiyor
 - [ ] `cargo --version` calisiyor
 - [ ] `solana --version` calisiyor

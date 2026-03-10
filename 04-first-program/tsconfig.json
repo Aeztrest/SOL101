@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
     "types": ["mocha"],
+    "lib": ["es2020", "dom"],
     "module": "commonjs",
     "target": "es2020",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true
   }
 }

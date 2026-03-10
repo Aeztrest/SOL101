@@ -30,3 +30,23 @@
 8. Programi devnet'e deploy et
 9. Frontend wallet baglantisi kur
 10. Frontend'den instruction cagir
+
+## Derslerde nasil ilerlenmeli?
+
+1. Her derste bu 3 adimi tekrarla:
+   README oku -> komutu calistir -> kucuk kodu canli yaz.
+2. Her klasorde sadece bir ana kavrami vurgula.
+3. Ogrenciye "neden boyle yazdik?" sorusunu mutlaka cevaplat.
+
+## Baslangic Gereksinimleri
+
+- Terminal kullanimi temel seviyede bilinmeli.
+- TypeScript ve Rust syntax'ina yabanci olunabilir.
+- Solana bilgisi sifir kabul edilir.
+
+## Egitmenin Konu Anlatimi
+
+Bu bolumde teknik detaya girmeden once "neden bu egitimi parcali yapiyoruz?" sorusunu cevaplayin.
+Ogrencinin once haritayi gormesi, sonra her derste o haritanin bir parcasina odaklanmasi gerekir.
+Bu README'yi acip sirayi gosterdikten sonra beklentiyi net kurun:
+"Bugun her adimda tek kavram ogrenip bir sonrakine tasiyacagiz."

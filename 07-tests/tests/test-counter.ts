@@ -1,18 +1,26 @@
 import * as anchor from "@coral-xyz/anchor";
 import { expect } from "chai";
 
+// Canli yazim notu:
+// 1) provider'i ayarla
+// 2) program'i al
+// 3) test account'u olustur
+// 4) initialize testini yaz
+// 5) increment testini yaz
+
 describe("test-counter", () => {
   // Provider: test transaction'larini hangi cluster'a gonderecegimizi belirler.
   const provider = anchor.AnchorProvider.env();
   anchor.setProvider(provider);
 
   // Program instance: Rust programin TS tarafindaki erisim noktasi.
-  const program = anchor.workspace.TestCounter as anchor.Program;
+  const program = anchor.workspace.TestCounter as any;
 
   // Bu keypair test boyunca kullanilacak counter account'u tutar.
   const counter = anchor.web3.Keypair.generate();
 
   it("initialize counter", async () => {
+    // Bu kisimda "accounts" map'i nasil yazilir canli gosterin.
     // Instruction cagrisi: initialize
     await program.methods
       .initialize()
@@ -32,6 +40,7 @@ describe("test-counter", () => {
   });
 
   it("increment counter", async () => {
+    // Bu kisimda ikinci instruction cagrisi yaziliyor.
     // Instruction cagrisi: increment
     await program.methods
       .increment()
