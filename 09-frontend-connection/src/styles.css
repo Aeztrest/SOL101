@@ -1,0 +1,23 @@
+:root {
+  font-family: sans-serif;
+  color: #111;
+  background: #f7f7f7;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 760px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.card {
+  margin-top: 16px;
+  padding: 16px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}

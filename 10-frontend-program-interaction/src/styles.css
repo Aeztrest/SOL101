@@ -1,0 +1,37 @@
+:root {
+  font-family: sans-serif;
+  color: #111;
+  background: #f4f4f4;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 760px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.card {
+  margin-top: 16px;
+  padding: 16px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+button {
+  border: 1px solid #999;
+  border-radius: 6px;
+  background: #fefefe;
+  padding: 8px 12px;
+  cursor: pointer;
+}

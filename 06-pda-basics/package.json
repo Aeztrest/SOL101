@@ -1,0 +1,17 @@
+{
+  "name": "counter-pda",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "test": "anchor test",
+    "derive": "ts-node scripts/derive-pda.ts"
+  },
+  "devDependencies": {
+    "@coral-xyz/anchor": "^0.30.1",
+    "@types/chai": "^4.3.11",
+    "chai": "^4.4.1",
+    "ts-mocha": "^10.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
